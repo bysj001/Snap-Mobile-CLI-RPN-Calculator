@@ -1,5 +1,6 @@
 from interfaces.interface import CalculatorInterface
 from calculator.rpn_calculator import RPNCalculator
+import sys
 
 class CliInterface(CalculatorInterface):
 
@@ -15,7 +16,8 @@ class CliInterface(CalculatorInterface):
             try:
                 line = input("> ").strip()
             except EOFError:
-                print("Invalid input. Please enter positive real numbers and listed operators: [*, -, +, /] or 'q' to quit")
+                print("\nEOF detected. Exiting.")
+                break
 
             if line.lower() == 'q':
                 break
@@ -29,6 +31,4 @@ class CliInterface(CalculatorInterface):
                 print(result)
             except Exception as e:
                 print(f"Error: {e}")
-
-
-            
+                sys.exit(1)

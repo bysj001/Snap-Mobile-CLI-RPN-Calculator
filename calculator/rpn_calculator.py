@@ -11,14 +11,17 @@ class RPNCalculator:
         for token in tokens:
             if self.operator.isOperator(token):
                 if len(self.stack) < 2:
-                    raise ValueError("Not enough operands for operation")
+                    raise ValueError(f"Not enough operands for '{token}'")
                 a = self.stack.pop()
                 b = self.stack.pop()
                 result = self.operator.calculate(token, b, a)
                 self.stack.append(result)
             else:
-                self.stack.append(float(token))
-
+                try:
+                    self.stack.append(float(token))
+                except ValueError:
+                    raise ValueError(f"Invalid token: '{token}' is not a number or supported operator")
+                
         if self.stack:
             return self.stack[-1]
         else:
