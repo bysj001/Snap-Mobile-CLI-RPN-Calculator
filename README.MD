@@ -12,20 +12,8 @@ This program provides is an RPN calculator with:
 
 ## Architecture
 
-├── README.MD
-├── calculator
-│   ├── operations.py
-│   └── rpn_calculator.py
-├── input.txt
-├── interfaces
-│   ├── cli_interface.py
-│   ├── file_interface.py
-│   └── interface.py
-├── main.py
-├── output.txt
-└── test
-    ├── __init__.py
-    └── unit_test.py
+![File structure](file_structure.png)
+![Architecture](architecture.png)
 
 ## Technical Reasoning
 
