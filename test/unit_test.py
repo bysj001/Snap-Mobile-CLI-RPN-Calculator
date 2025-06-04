@@ -45,8 +45,6 @@ class TestRPNCalculator(unittest.TestCase):
     def test_complex_expression(self):
         self.assertEqual(self.calc.runCalculation(["3", "4", "+", "2", "*", "7", "/"]), 2.0)
 
-    
-
     # Input Tests
     def test_invalid_operator(self):
         with self.assertRaises(ValueError):

@@ -17,7 +17,7 @@ class CliInterface(CalculatorInterface):
         print(" • Example: To compute (3 + 4), enter: 3 4 +")
         print(" • Example: To compute (5 * (3 + 2)), enter: 3 2 + 5 *")
         print(" • Type 'q' to quit")
-        print(" • Type 'q' to clear stack")
+        print(" • Type 'clear' to clear stack")
         print("=" * 40 + "\n")
 
         while True:
@@ -27,17 +27,16 @@ class CliInterface(CalculatorInterface):
                 print("\nEOF detected. Exiting.")
                 break
 
+            if not line:
+                continue
+
             if line.lower() == 'q':
                 print("Thank you for using the RPN Calculator. Goodbye!")
                 break
             
             if line.lower() == 'clear':
                 self.calc.stack.clear()
-                print()
-                print("Stack cleared. \n")
-                continue
-
-            if not line:
+                print("\n Stack cleared. \n")
                 continue
 
             tokens = line.split()

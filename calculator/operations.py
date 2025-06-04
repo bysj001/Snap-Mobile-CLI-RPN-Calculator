@@ -9,10 +9,7 @@ class Operations:
         }
 
     def isOperator(self, sign: str) -> bool:
-        if sign in self.operator_map:
-            return True
-        else:
-            return False
+        return True if sign in self.operator_map else False
         
     def calculate(self, sign: str, a: float, b: float) -> float:
         if not self.isOperator(sign):
