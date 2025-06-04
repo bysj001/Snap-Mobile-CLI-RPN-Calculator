@@ -44,7 +44,9 @@ This program provides is an RPN calculator with:
    - Add additional operations
    - Implement different interfaces (WebSocket, TCP, etc.)
    - Add logging and monitoring
-   - Configuration management
+   - Improved UI/UX by providing web or mobile platform interface for the calculator
+   - Additional unit test coverage
+   - Complex mathematical operations
 
 ## Getting Started
 
@@ -68,6 +70,15 @@ This program provides is an RPN calculator with:
   python3 main.py --interface cli
   ```
 
+- **Help Message**
+  ```bash
+  python3 main.py --help
+  ```
+
+- **Clear the stack and restart calculation without quiting the calculator**
+  ```bash
+  > clear
+  ```
 ### Running Tests
 
 - This project uses Python's built-in `unittest` framework for testing the RPN calculator

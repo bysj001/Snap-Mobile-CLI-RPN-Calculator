@@ -6,7 +6,17 @@ from interfaces.cli_interface import CliInterface
 def main():
 
     # Taking in user input argument with different interface choices
-    parser = argparse.ArgumentParser(description="RPN calculator with multiple interfaces")
+    parser = argparse.ArgumentParser(
+        description=(
+            "RPN Calculator with multiple interface options.\n\n"
+            "Usage:\n"
+            "  python main.py --interface cli\n\n"
+            "In CLI mode, enter numbers and operations in Reverse Polish Notation (RPN).\n"
+            "Example: To compute (5 * (3 + 2)), enter: 3 2 + 5 *\n"
+            "Type 'q' to quit the CLI."
+        ),
+        formatter_class=argparse.RawTextHelpFormatter
+    )
     parser.add_argument(
         "--interface",
         choices=["cli", "file"], # add more choices...
