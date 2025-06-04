@@ -82,4 +82,8 @@ This program provides is an RPN calculator with:
 ### Running Tests
 
 - This project uses Python's built-in `unittest` framework for testing the RPN calculator
-- From the root directory run: python3 -m unittest test.unit_test
+
+- From the root directory run: 
+  ```bash
+  python3 -m unittest test.unit_test
+  ```

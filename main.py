@@ -14,6 +14,7 @@ def main():
             "In CLI mode, enter numbers and operations in Reverse Polish Notation (RPN).\n"
             "Example: To compute (5 * (3 + 2)), enter: 3 2 + 5 *\n"
             "Type 'q' to quit the CLI."
+            "Type 'clear' to clear the stack and restart calculation without exiting."
         ),
         formatter_class=argparse.RawTextHelpFormatter
     )

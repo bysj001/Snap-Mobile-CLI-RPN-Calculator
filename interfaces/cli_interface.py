@@ -17,6 +17,7 @@ class CliInterface(CalculatorInterface):
         print(" • Example: To compute (3 + 4), enter: 3 4 +")
         print(" • Example: To compute (5 * (3 + 2)), enter: 3 2 + 5 *")
         print(" • Type 'q' to quit")
+        print(" • Type 'q' to clear stack")
         print("=" * 40 + "\n")
 
         while True:
